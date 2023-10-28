@@ -1,13 +1,12 @@
-import { useState } from 'react';
 import './App.css';
-import Theme from './components/theme/Theme';
+import RobSvg from './components/robsvg/RobSvg';
+
 
 function App() {
-  const [lights, setLights] = useState(false);
 
   return (
     <main>
-      <Theme lights={lights} setLights={setLights} />
+      <RobSvg />
     </main>
   );
 }
