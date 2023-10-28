@@ -1,10 +1,16 @@
+import { useState } from 'react';
 import './App.css';
-import Hero from './components/hero-city/Hero';
+import HeroSthlm from './components/hero-sthlm/HeroSthlm';
+import Theme from './components/theme/Theme';
 
 function App() {
-  return <main>
-    <Hero />
-  </main>;
+  const [lights, setLights] = useState(false);
+  return (
+    <main>
+      <Theme lights={lights} setLights={setLights} />
+      <HeroSthlm lights={lights} />
+    </main>
+  );
 }
 
 export default App;

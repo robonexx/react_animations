@@ -4,8 +4,7 @@ import { useSpring, animated } from 'react-spring';
 
 import './Theme.scss';
 
-export default function Theme(/* { lights, setLights } */) {
-  const [lights, setLights] = useState(false)
+export default function Theme({ lights, setLights }) {
 
   const { x } = useSpring({ duration: 600, x: lights ? 1 : 0 });
   const themeRef = useRef();
