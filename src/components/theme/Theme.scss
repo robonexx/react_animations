@@ -9,7 +9,7 @@
   right: auto;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
-  z-index: 100;
+  z-index: 1000;
 
   @media screen and (min-width: 768px) {
     transform: scale(0.3);
