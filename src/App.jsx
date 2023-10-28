@@ -1,12 +1,10 @@
 import './App.css';
-import HeroCta from './components/hero-with-cta-and-bg/HeroCta';
+import Hero from './components/hero-city/Hero';
 
 function App() {
-  return (
-    <main>
-      <HeroCta />
-    </main>
-  );
+  return <main>
+    <Hero />
+  </main>;
 }
 
 export default App;
