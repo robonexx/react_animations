@@ -25,15 +25,21 @@ const Loader = () => {
   }, []);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {}, 1500);
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
     Animate();
     return () => clearTimeout(timeout);
   }, [Animate]);
 
   return (
-    <div className='loader' ref={loaderRef}>
-      <span>0</span>
-    </div>
+    <>
+      {isLoading ? (
+        <div className='loader' ref={loaderRef}>
+          <span>0</span>
+        </div>
+      ) : null}
+    </>
   );
 };
 
