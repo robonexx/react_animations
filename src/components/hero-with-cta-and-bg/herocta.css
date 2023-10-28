@@ -1,0 +1,33 @@
+.hero_bg {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_bg > svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    fill: #282828;
+    background-color: rgba(0, 0, 0, 0.76);
+    
+}
+
+
+.cta {
+    position: absolute;
+    top: 65%;
+    left: 30%;
+    z-index: 100;
+    padding: 3vmin 5vmin;
+    background-color: #c38d9e;
+    color: #ededed;
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+    border-radius: 5px;
+}
