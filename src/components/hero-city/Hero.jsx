@@ -15,7 +15,8 @@ const transition6 = { duration: 2, repeat: 4, ease: 'easeIn' };
 const Hero = () => {
   return (
     <div className='hero_wrapper'>
-      <img src={IMG} alt='' className='image' />
+          <img src={IMG} alt='' className='image' />
+         <h1>EARTH</h1>
       <section>
         <div className='container'>
           <svg
