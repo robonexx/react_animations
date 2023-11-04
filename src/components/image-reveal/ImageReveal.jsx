@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import { Power2 } from 'gsap/all'; // Importing 'all' for easier access to plugins
-
+import { Power2 } from 'gsap/all'; 
 import './image-reveal.scss';
 
 const ImageReveal = ({ title, sub, img }) => {

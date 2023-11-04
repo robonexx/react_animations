@@ -6,6 +6,7 @@ import RobSvg from './components/robsvg/RobSvg';
 import HeroLoader from './components/hero-loader/HeroLoader';
 import ImageReveal from './components/image-reveal/ImageReveal';
 import IMG from './assets/images/tony.png';
+import Bio from './components/bio/Bio';
 
 const data = [
   {
@@ -32,6 +33,7 @@ function App() {
           img={item.img}
         />
       ))}
+      <Bio />
     </main>
   );
 }
