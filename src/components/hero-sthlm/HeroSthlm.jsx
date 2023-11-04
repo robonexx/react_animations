@@ -4,11 +4,13 @@ import './heroSthlm.scss';
 
 const skyVariants = {
   initial: {
-    fill: ['#02040e', '#232a4d', '#89b8d8'],
+        fill: ['#02040e', '#232a4d', '#89b8d8'],
+        stroke: '#fafaf8'
+      
   },
   animate: {
-    fill: ['#fac358', '#dd541c', '#c65f58', '#02040e'],
-    transition: { duration: 1, ease: 'easeOut' },
+    fill: ['#fac358', '#dd541c', '#c65f58', '#02040e'], stroke: '#000000',
+      transition: { duration: 1, ease: 'easeOut' },
   },
 };
 

@@ -1,0 +1,74 @@
+.intro_loader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dual {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dual__inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.dual__img {
+  position: absolute;
+  padding: 20vh 0;
+  width: 50vw;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  background: url('https://images.pexels.com/photos/18801744/pexels-photo-18801744/free-photo-of-natur-oken-torr-usa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')
+    no-repeat 50% 0%;
+  background-size: cover;
+}
+
+.dual__content {
+  position: relative;
+  width: 100%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 500px;
+  padding: 1rem 0.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  line-height: 1.6;
+  color: #ffffff;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    padding: 1.5rem 2.25rem;
+  }
+}
+
+.line1,
+.line2,
+.line3 {
+  z-index: 0;
+  position: absolute;
+  height: 33.33%;
+  width: 100%;
+  background: #2c2c38;
+  transform: translateX(200%);
+}
+
+.line1 {
+  top: 0;
+}
+
+.line2 {
+  top: 33.33%;
+}
+
+.line3 {
+  top: 66.66%;
+}
