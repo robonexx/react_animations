@@ -1,23 +1,24 @@
 import './bio.scss';
 import TextReveal from '../reveal/TextReveal';
 
-const Bio = () => {
+const Bio = ({ title, subtitle, desc }) => {
+  
+
+  if (!title || !subtitle || !desc) {
+    // If data is not available yet, return null or a loading indicator
+    return null;
+  }
   return (
     <div className='bio'>
       <TextReveal>
-        <h1>Tony Gogo</h1>
+        <h1>{title}</h1>
       </TextReveal>
       <TextReveal>
-        <h2>A true pioneer</h2>
+        <h2>{subtitle}</h2>
       </TextReveal>
       <TextReveal>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque velit
-          necessitatibus blanditiis rem, mollitia reiciendis quaerat nostrum eum
-          cupiditate suscipit qui saepe id soluta tenetur repudiandae maiores.
-          Non, ab? Vitae nostrum consequatur, facere voluptas aliquid incidunt
-          molestias, voluptatibus in nisi alias assumenda rerum dolore minus
-          tempore vero quam obcaecati atque!
+          {desc}
         </p>
       </TextReveal>
     </div>

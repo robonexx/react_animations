@@ -1,0 +1,48 @@
+.top-scroll-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: 980px) {
+      left: 85%;
+      bottom: 30vh;
+    }
+
+    .top-scroll-text {
+      transform: rotate(90deg);
+      opacity: 1;
+      white-space: nowrap;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 30px;
+    }
+
+    .top-scroll-line {
+      width: 1px;
+      height: 80px;
+      background-color: #343434;
+      overflow: hidden;
+
+      .top-scroll-line-in {
+        width: 1px;
+        height: 100%;
+        background-color: white;
+        animation: pulseY infinite 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+  }
+
+  @keyframes pulseY {
+    from {
+      transform: translateY(-100px);
+    }
+
+    to {
+      transform: translateY(100px);
+    }
+  }

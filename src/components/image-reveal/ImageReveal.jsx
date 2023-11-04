@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import { Power2 } from 'gsap/all'; 
+import { Power2 } from 'gsap/all';
 import './image-reveal.scss';
+import ScrollIndicator from '../scrolldown/ScrollIndicator';
 
 const ImageReveal = ({ title, sub, img }) => {
   const image = useRef(null);
@@ -25,16 +26,18 @@ const ImageReveal = ({ title, sub, img }) => {
       delay: -1.4,
     });
 
-    tl.from(text.current, {
-      duration: 1,
-      opacity: 0,
-      textShadow: '10px 10px 2px black',
-      scale: 10,
-      transform: 'translateX(-20%)',
-      rotate: 0,
-      ease: Power2.easeInOut,
-      delay: -1.6,
-    });
+    tl.fromTo(
+      text.current,
+      {
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        opacity: 1,
+        ease: Power2.easeInOut,
+        delay: -0.5,
+      }
+    );
 
     // Kill the timeline to prevent memory leaks
     return () => {
@@ -49,7 +52,7 @@ const ImageReveal = ({ title, sub, img }) => {
 
   return (
     <div className='image-reveal'>
-      <p ref={text}>{title}</p>
+      <h2 ref={text}>{title}</h2>
       <div className='container' ref={container}>
         <div className='overlay' ref={overlayRef}>
           <p>{sub}</p>
@@ -58,6 +61,7 @@ const ImageReveal = ({ title, sub, img }) => {
           <img ref={image} src={img} alt={title} />
         </div>
       </div>
+      <ScrollIndicator />
     </div>
   );
 };
