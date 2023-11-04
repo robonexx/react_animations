@@ -14,7 +14,7 @@ const HeroLoader = () => {
   const Animate = () => {
     const loader = anime.timeline({
       targets: ['line1', 'line2', 'line3'],
-        duration: 1600,
+        duration: 1200,
       delay: 100,
       easing: 'easeOutSine',
     });
@@ -50,20 +50,21 @@ const HeroLoader = () => {
       })
       .add({
         targets: [line1.current, line2.current, line3.current],
-        width: '50%',
+          width: '50%',
+        duration: 500,
       });
 
     const imageLoad = anime.timeline({
       targets: imageRef.current,
-        duration: 600,
+        duration: 1000,
       easing: 'easeOutSine',
     });
     imageLoad.add({
       targets: imageRef.current,
       opacity: [0, 0, 1],
-      height: ['0%', '60%'],
-      duration: 1000,
-      delay: 1000,
+      height: ['0%', '80%', '100%'],
+      duration: 2000,
+      delay: 700,
     });
       
     const text = anime.timeline({
