@@ -14,7 +14,7 @@ const HeroLoader = () => {
   const Animate = () => {
     const loader = anime.timeline({
       targets: ['line1', 'line2', 'line3'],
-        duration: 1200,
+        duration: 1000,
       delay: 100,
       easing: 'easeOutSine',
     });
@@ -25,7 +25,7 @@ const HeroLoader = () => {
         translateX: ['200%', '0%'],
         opacity: 1,
         easing: 'easeInOutSine',
-        duration: 500,
+        duration: 300,
         direction: 'forwards',
         loop: false,
       })
@@ -35,7 +35,7 @@ const HeroLoader = () => {
         translateX: ['200%', '0%'],
         opacity: 1,
         easing: 'easeInOutSine',
-        duration: 500,
+        duration: 300,
         direction: 'forwards',
         loop: false,
       })
@@ -45,26 +45,26 @@ const HeroLoader = () => {
         translateX: ['200%', '0%'],
         opacity: 1,
         easing: 'easeInOutSine',
-        duration: 500,
+        duration: 300,
         loop: false,
       })
       .add({
         targets: [line1.current, line2.current, line3.current],
           width: '50%',
-        duration: 500,
+        duration: 300,
       });
 
     const imageLoad = anime.timeline({
       targets: imageRef.current,
-        duration: 1000,
+        duration: 700,
       easing: 'easeOutSine',
     });
     imageLoad.add({
       targets: imageRef.current,
       opacity: [0, 0, 1],
       height: ['0%', '80%', '100%'],
-      duration: 2000,
-      delay: 700,
+      duration: 1400,
+      delay: 600,
     });
       
     const text = anime.timeline({

@@ -30,13 +30,14 @@ function App() {
   const [lights, setLights] = useState(false);
   return (
     <main>
-      <PageLoader setLoading={setLoading} title='Manne Schutt' />
+      {/*  <PageLoader setLoading={setLoading} title='Manne Schutt' /> */}
       {/*  <Theme lights={lights} setLights={setLights} />
       <HeroSthlm lights={lights} />
       <RobSvg /> 
-      <HeroLoader />
       */}
-      {!loading && (
+      <HeroLoader />
+
+      {/* {!loading && (
         <>
           {data.map((item, index) => (
             <ImageReveal
@@ -55,7 +56,7 @@ function App() {
             />
           ))}
         </>
-      )}
+      )} */}
     </main>
   );
 }
