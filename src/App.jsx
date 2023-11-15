@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import HeroSthlm from './components/hero-sthlm/HeroSthlm';
 import Theme from './components/theme/Theme';
@@ -8,6 +8,8 @@ import ImageReveal from './components/image-reveal/ImageReveal';
 import IMG from './assets/images/manne.jpg';
 import Bio from './components/bio/Bio';
 import PageLoader from './components/page-loader/PageLoader';
+import Gooey from './components/icons/Gooey';
+import BackgroundWaves from './components/background-waves/BackgroundWaves';
 
 const data = [
   {
@@ -28,15 +30,21 @@ const bioData = [
 function App() {
   const [loading, setLoading] = useState(true);
   const [lights, setLights] = useState(false);
+
+  // using to test animations, as a loading screen :D
+ /*  useEffect(() => {
+    const timeOut = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timeOut);
+  }, []); */
   return (
     <main>
-      {/*  <PageLoader setLoading={setLoading} title='Manne Schutt' /> */}
+      {/* <PageLoader setLoading={setLoading} title='Rob - Bot' /> */}
       {/*  <Theme lights={lights} setLights={setLights} />
       <HeroSthlm lights={lights} />
-      <RobSvg /> 
+      
       */}
-      <HeroLoader />
-
+      {/* <HeroLoader /> */}
+      <RobSvg /> 
       {/* {!loading && (
         <>
           {data.map((item, index) => (

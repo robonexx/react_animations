@@ -6,12 +6,12 @@ const RobSvg = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const Animate = useCallback(() => {
-    const loader = anime.timeline({
+    const timeline = anime.timeline({
       targets: '.intro',
       duration: 1500,
       easing: 'easeOutSine',
     });
-    loader
+    timeline
       .add({
         targets: '.rob .lines path',
         strokeDashoffset: [anime.setDashoffset, 0],
