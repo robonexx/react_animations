@@ -32,20 +32,20 @@ function App() {
   const [lights, setLights] = useState(false);
 
   // using to test animations, as a loading screen :D
- /*  useEffect(() => {
+  useEffect(() => {
     const timeOut = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timeOut);
-  }, []); */
+  }, []);
   return (
     <main>
       {/* <PageLoader setLoading={setLoading} title='Rob - Bot' /> */}
       {/*  <Theme lights={lights} setLights={setLights} />
-      <HeroSthlm lights={lights} />
+      <HeroSthlm lights={lights} /> */}
       
-      */}
-      {/* <HeroLoader /> */}
-      <RobSvg /> 
-      {/* {!loading && (
+     
+      <HeroLoader />
+      {/* <RobSvg />  */}
+       {!loading && (
         <>
           {data.map((item, index) => (
             <ImageReveal
@@ -62,9 +62,9 @@ function App() {
               subtitle={item.subtitle}
               desc={item.desc}
             />
-          ))}
+          ))} 
         </>
-      )} */}
+      )}
     </main>
   );
 }
